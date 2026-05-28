@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Catálogo de repuestos premium para motos - MotoStore JC">
+  <meta name="theme-color" content="#c41e1e">
+  <title>MotoStore JC | Catálogo</title>
+  
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo-area" id="logoHomeLink">
+        <img src="img/LogoSF.png" alt="MotoStore JC" class="logo-img" onerror="this.src='https://placehold.co/60x60?text=MS'">
+        <div class="logo-text">
+          <h1>MotoStore JC</h1>
+          <p>REPUESTOS PREMIUM</p>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html" class="active-nav">Catálogo</a></li>
+        <li><a href="https://wa.me/+573122665314?text=Hola%2C%20estoy%20interesado%20en%20los%20productos%20de%20MotoStore%20JC" target="_blank" class="contact-wa"><i class="fab fa-whatsapp"></i> Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="filters-container">
+      <div class="category-filters" id="desktopFilters">
+        <button class="filter-btn active" data-category="all">Todos</button>
+        <button class="filter-btn" data-category="espejos">Espejos</button>
+        <button class="filter-btn" data-category="manubrios">Manubrios</button>
+        <button class="filter-btn" data-category="luces">Luces</button>
+        <button class="filter-btn" data-category="direccionales">Direccionales</button>
+      </div>
+      <div class="mobile-filter-select">
+        <select id="mobileFilterSelect">
+          <option value="all">📌 Todos</option>
+          <option value="espejos">🔹 Espejos</option>
+          <option value="manubrios">🏍️ Manubrios</option>
+          <option value="luces">💡 Luces</option>
+          <option value="direccionales">✨ Direccionales</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="productos">
+      <h2 class="section-title">Nuestros productos</h2>
+      <div class="products-grid" id="productsContainer"></div>
+    </div>
+  </div>
+
+  <footer id="contacto">
+    <div class="footer-content">
+      <p>© 2026 MotoStore JC - Repuestos para motos con calidad y diseño.</p>
+      <p><i class="fas fa-map-marker-alt"></i> Envíos a toda la ciudad</p>
+      <div class="social-links">
+        <a href="https://wa.me/+573122665314?text=Hola%2C%20estoy%20interesado%20en%20los%20productos%20de%20MotoStore%20JC" target="_blank" class="whatsapp-link">
+          <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/+573122665314?text=Hola%2C%20estoy%20interesado%20en%20los%20productos%20de%20MotoStore%20JC" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
