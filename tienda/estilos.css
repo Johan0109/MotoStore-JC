@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Fondo oscuro premium */
 body {
   background: #050505;
   background-image: radial-gradient(circle at 25% 40%, #0a0a0f 0%, #000000 100%);
@@ -14,7 +13,7 @@ body {
   line-height: 1.5;
 }
 
-/* HEADER ESTÁTICO (sin sticky) */
+/* HEADER ESTÁTICO */
 .site-header {
   background: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(8px);
@@ -33,7 +32,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* LOGO ÁREA (más grande) */
 .logo-area {
   display: flex;
   align-items: center;
@@ -59,7 +57,6 @@ body {
   white-space: nowrap;
 }
 
-/* Menú de navegación */
 .main-nav {
   flex-shrink: 1;
 }
@@ -99,7 +96,7 @@ body {
   color: #c41e1e;
 }
 
-/* HERO */
+/* HERO: PC dos columnas */
 .hero {
   max-width: 1400px;
   margin: 2rem auto;
@@ -402,13 +399,13 @@ body {
   transform: scale(1.02);
 }
 
-/* ========== RESPONSIVE MÓVIL (mejorado: más espacio, menos apretado) ========== */
+/* ========== RESPONSIVE MÓVIL ========== */
 @media (max-width: 768px) {
-  /* Contenedor principal con más aire */
+  /* Header columna */
   .header-container {
-    padding: 0.8rem 1.2rem;
+    padding: 1rem 1rem;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 0.8rem;
   }
   .logo-area {
@@ -419,7 +416,7 @@ body {
     height: 50px;
   }
   .logo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     white-space: normal;
     text-align: center;
   }
@@ -436,23 +433,37 @@ body {
     padding: 0.4rem 0.8rem;
   }
 
-  /* Hero más espaciado */
+  /* Hero: imagen arriba, texto abajo (columna-reverse) */
   .hero {
-    padding: 1.5rem 1.2rem;
+    flex-direction: column-reverse;
+    padding: 1.5rem 1rem;
     margin: 1rem auto;
-    gap: 1.8rem;
+    gap: 2rem;
     text-align: center;
+  }
+  .hero-image {
+    margin-bottom: 0;
+  }
+  .hero-icon {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+  .hero-icon i {
+    font-size: 3rem;
   }
   .hero-content {
     text-align: center;
   }
   .badge {
     font-size: 0.7rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    padding: 0.3rem 1rem;
+    display: inline-block;
   }
   .hero-content h1 {
     font-size: 1.8rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
   }
   .hero-content p {
     font-size: 0.9rem;
@@ -461,20 +472,13 @@ body {
   }
   .btn-primary {
     margin: 0 auto;
-    padding: 0.7rem 1.4rem;
+    padding: 0.75rem 1.5rem;
     font-size: 0.85rem;
-  }
-  .hero-icon {
-    width: 120px;
-    height: 120px;
-  }
-  .hero-icon i {
-    font-size: 2.8rem;
   }
 
   /* Categorías */
   .categories {
-    padding: 0 1.2rem;
+    padding: 0 1rem;
     margin: 1.5rem auto;
   }
   .section-title {
@@ -497,7 +501,7 @@ body {
 
   /* CTA */
   .cta {
-    padding: 0 1.2rem;
+    padding: 0 1rem;
     margin: 1.5rem auto;
   }
   .cta-box {
@@ -512,15 +516,16 @@ body {
 
   /* Footer */
   .site-footer {
-    padding: 1.2rem;
+    padding: 1.2rem 1rem;
   }
   .whatsapp-footer {
     font-size: 0.7rem;
+    padding: 0.25rem 0.8rem;
   }
 
-  /* Filtros y productos (siempre que estén en la página de productos) */
+  /* Filtros y productos */
   .filters-container {
-    padding: 0 1.2rem;
+    padding: 0 1rem;
   }
   .desktop-filters {
     display: none;
@@ -530,7 +535,7 @@ body {
     margin-bottom: 1rem;
   }
   .products-section {
-    padding: 0 1.2rem;
+    padding: 0 1rem;
   }
   .products-grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
