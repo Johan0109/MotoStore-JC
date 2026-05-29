@@ -25,7 +25,7 @@ body {
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1rem 2rem; /* más vertical para que el logo grande no quede apretado */
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,11 +37,11 @@ body {
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 1rem; /* más separación */
+  gap: 1rem;
   cursor: pointer;
 }
 .logo-img {
-  height: 60px; /* antes 45px, ahora más grande */
+  height: 60px;
   width: auto;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
   transition: transform 0.2s;
@@ -50,7 +50,7 @@ body {
   transform: scale(1.02);
 }
 .logo-text h1 {
-  font-size: 1.8rem; /* antes 1.3rem, más grande */
+  font-size: 1.8rem;
   font-family: 'Playfair Display', serif;
   background: linear-gradient(135deg, #ffffff, #e0b8b8);
   -webkit-background-clip: text;
@@ -58,7 +58,6 @@ body {
   color: transparent;
   white-space: nowrap;
 }
-/* Eliminado el párrafo del eslogan del logo */
 
 /* Menú de navegación */
 .main-nav {
@@ -403,47 +402,125 @@ body {
   transform: scale(1.02);
 }
 
-/* RESPONSIVE MÓVIL */
+/* ========== RESPONSIVE MÓVIL (mejorado: más espacio, menos apretado) ========== */
 @media (max-width: 768px) {
+  /* Contenedor principal con más aire */
   .header-container {
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1.2rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .logo-area {
+    justify-content: center;
+    gap: 0.8rem;
   }
   .logo-img {
-    height: 45px; /* en móvil un poco más pequeño pero aún grande */
+    height: 50px;
   }
   .logo-text h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    white-space: normal;
+    text-align: center;
+  }
+  .main-nav {
+    width: 100%;
   }
   .nav-links {
-    gap: 0.6rem;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
   .nav-links a {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
+
+  /* Hero más espaciado */
   .hero {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.2rem;
+    margin: 1rem auto;
+    gap: 1.8rem;
     text-align: center;
-    gap: 1.5rem;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .badge {
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
   }
   .hero-content h1 {
     font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+    margin: 0 auto 1.5rem;
+    max-width: 90%;
+  }
+  .btn-primary {
+    margin: 0 auto;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.85rem;
   }
   .hero-icon {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
   }
   .hero-icon i {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
+
+  /* Categorías */
   .categories {
-    padding: 0 1rem;
+    padding: 0 1.2rem;
+    margin: 1.5rem auto;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   .categories-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
   }
   .category-card {
     padding: 1rem;
+  }
+  .category-card i {
+    font-size: 1.8rem;
+  }
+  .category-card h3 {
+    font-size: 1rem;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 0 1.2rem;
+    margin: 1.5rem auto;
+  }
+  .cta-box {
+    padding: 1.5rem;
+  }
+  .cta-box h2 {
+    font-size: 1.3rem;
+  }
+  .cta-box p {
+    font-size: 0.85rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 1.2rem;
+  }
+  .whatsapp-footer {
+    font-size: 0.7rem;
+  }
+
+  /* Filtros y productos (siempre que estén en la página de productos) */
+  .filters-container {
+    padding: 0 1.2rem;
   }
   .desktop-filters {
     display: none;
@@ -453,17 +530,24 @@ body {
     margin-bottom: 1rem;
   }
   .products-section {
-    padding: 0 1rem;
+    padding: 0 1.2rem;
   }
   .products-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1rem;
   }
-  .cta-box {
-    padding: 1.5rem;
+  .product-img {
+    height: 120px;
   }
-  .cta-box h2 {
-    font-size: 1.3rem;
+  .product-card h3 {
+    font-size: 0.85rem;
+  }
+  .product-price {
+    font-size: 1rem;
+  }
+  .whatsapp-product-btn {
+    font-size: 0.7rem;
+    padding: 0.4rem;
   }
 }
 
